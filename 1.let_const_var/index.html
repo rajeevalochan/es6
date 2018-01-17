@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>var, let & constant</title>
+</head>
+<body>
+    <script>
+       /* the value of the var can be updated and 
+       also we can declare a var with same name */
+        var width = 100;
+        var width = 5000; 
+
+        var pnts = 50;
+        let access = false; // window-scope
+        if(pnts > 20) {
+           let access= true; // block-scope
+        }
+
+
+        let a = 500;//let value can be updated but you cannot declare same varieable name twice
+        console.log(a=22);
+
+        const PERSON = {
+            name: 'Rajeevalochan',
+            age: 23
+        }
+        Object.freeze(PERSON);// this method freezes the object and doesnot changes the value
+
+
+        for(let i=0; i<10; i++) { 
+            console.log(i);
+            setTimeout(function() {
+                console.log(`value of i = ${i}`);
+            },1000);
+        }
+
+        //Temporal-Dead-Zone
+        console.log(pizza);
+        let pizza = 'Junk food, makes people sooo obessive';
+
+    </script>
+</body>
+</html>
